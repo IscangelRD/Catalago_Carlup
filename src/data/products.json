@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "name": "Suéter de Lana",
+      "description": "Material: 100% lana",
+      "price": 350,
+      "image": "/images/sueter.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Ensamble Casual",
+      "description": "Incluye: Suéter + Falda",
+      "price": 600,
+      "image": "/images/sueter2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Ensamble Casual",
+      "description": "Incluye: Suéter + Falda",
+      "price": 600,
+      "image": "/images/sueter3.jpg"
+    }
+  ]
+  

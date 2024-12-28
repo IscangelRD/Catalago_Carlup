@@ -1,11 +1,42 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
+import ProductCard from '../components/ProductCard.astro';
+import products from '../data/products.json';
 ---
-
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Suéteres y Ensambles</title>
+  </head>
+  <body>
+    <Header title="Catálogo de Suéteres y Ensambles" />
+    <main>
+		<main class="catalog">
+			{products.map(product => (
+			  <ProductCard {...product} />
+			))}
+    </main>
+  </body>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #ff6b6b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .catalog {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+  </style>
+</html>
