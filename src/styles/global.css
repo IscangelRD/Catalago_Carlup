@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: burlywood;
+    color: #333;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 16px;
+  }
+  
+  p {
+    line-height: 1.6;
+  }
+  

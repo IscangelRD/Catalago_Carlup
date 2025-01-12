@@ -1,24 +1,93 @@
 [
     {
       "id": 1,
-      "name": "Suéter de Lana",
+      "name": "Modelo 131",
       "description": "Material: 100% lana",
       "price": 350,
-      "image": "/images/sueter.jpg"
+      "image": "/images/sueter.jpg",
+      "gallery": [
+        "/images/sueter3.jpg"
+      ],
+      "category":"sueter"
     },
+  
     {
       "id": 2,
-      "name": "Ensamble Casual",
+      "name": "Modelo 132",
       "description": "Incluye: Suéter + Falda",
       "price": 600,
-      "image": "/images/sueter2.jpg"
+      "image": "/images/sueter2.jpg",
+      "gallery":[
+        "/images/sueter3.jpg",
+        "/images/sueter2.jpg"
+      ],
+      "category":"capa"
     },
     {
       "id": 3,
+      "name": "Poncho",
+      "description": "Sueter estilo kimono",
+      "price": 250,
+      "image": "/images/sueter3.jpg",
+      "gallery":[
+        "/images/sueter3.jpg"
+      ],
+      "category":"poncho"
+    },
+    {
+      "id": 4,
       "name": "Ensamble Casual",
-      "description": "Incluye: Suéter + Falda",
-      "price": 600,
-      "image": "/images/sueter3.jpg"
+      "description": "Sueter estilo kimono",
+      "price": 250,
+      "image": "/images/sueter3.jpg",
+      "gallery":[
+        "/images/sueter3.jpg"
+      ],
+      "category":"ensamble"
+    },
+    {
+      "id": 5,
+      "name": "Ensamble Casual",
+      "description": "Sueter estilo kimono",
+      "price": 250,
+      "image": "/images/sueter3.jpg",
+      "gallery":[
+        "/images/sueter3.jpg"
+      ],
+      "category":"ensamble"
+    },
+    {
+      "id": 6,
+      "name": "Ensamble Casual",
+      "description": "Sueter estilo kimono",
+      "price": 250,
+      "image": "/images/sueter3.jpg",
+      "gallery":[
+        "/images/sueter3.jpg"
+      ],
+      "category":"ensamble"
+    },
+    {
+      "id": 7,
+      "name": "Ensamble Casual",
+      "description": "Sueter estilo kimono",
+      "price": 250,
+      "image": "/images/sueter3.jpg",
+      "gallery":[
+        "/images/sueter3.jpg"
+      ],
+      "category":"ensamble"
+    },
+    {
+      "id": 8,
+      "name": "Ensamble ",
+      "description": "Sueter estilo kimono",
+      "price": 250,
+      "image": "/images/sueter3.jpg",
+      "gallery":[
+        "/images/sueter3.jpg"
+      ],
+      "category":"ensamble"
     }
   ]
   

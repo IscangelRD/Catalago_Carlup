@@ -1,0 +1,35 @@
+---
+import Header from '../../components/Header.astro';
+
+const { nombre } = Astro.props;
+
+const products = {
+  ropa: [
+    { name: "Camisa Azul", image: "/images/camisa.jpg", price: "$20" },
+    { name: "Pantalón Negro", image: "/images/pantalon.jpg", price: "$30" },
+  ],
+  accesorios: [
+    { name: "Collar de Oro", image: "/images/collar.jpg", price: "$50" },
+  ],
+  calzado: [
+    { name: "Zapatos Deportivos", image: "/images/zapatos.jpg", price: "$40" },
+  ],
+}[nombre];
+---
+<Header />
+<main class="products">
+  <h1>{nombre.charAt(0).toUpperCase() + nombre.slice(1)}</h1>
+  <div class="product-grid">
+    {products.map((product) => (
+      <div class="product-card">
+        <img src={product.image} alt={product.name} />
+        <h2>{product.name}</h2>
+        <p>{product.price}</p>
+      </div>
+    ))}
+  </div>
+</main>
+
+<style>
+  /* Similar a la categoría pero con diseño de productos */
+</style>

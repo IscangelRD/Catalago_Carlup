@@ -1,42 +1,36 @@
 ---
 import Header from '../components/Header.astro';
-import ProductCard from '../components/ProductCard.astro';
-import products from '../data/products.json';
+const HeroProducts = [
+  { name: "Ropa", image: "/images/sueter.jpg", link: "/categorias/ropa" },
+  { name: "Accesorios", image: "/images/sueter2.jpg", link: "/categorias/accesorios" },
+  { name: "Calzado", image: "/images/calzado.jpg", link: "/categorias/calzado" },
+];
 ---
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catálogo de Suéteres y Ensambles</title>
-  </head>
-  <body>
-    <Header title="Catálogo de Suéteres y Ensambles" />
-    <main>
-		<main class="catalog">
-			{products.map(product => (
-			  <ProductCard {...product} />
-			))}
-    </main>
-  </body>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #ff6b6b;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    .catalog {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      padding: 20px;
-    }
-  </style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo Aleana</title>
+</head>
+<body>
+<Header></Header>
+   <div class="product-card">
+    <h3>Productos de temporada</h3>
+
+   </div>
+    
+      <style>
+        .product-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 300px;
+  margin: 16px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+      </style>
 </html>

@@ -1,0 +1,94 @@
+---
+// Importamos el Header
+import Header from '../../components/Header.astro';
+
+const categories = [
+  { name: "Ropa", image: "/images/sueter.jpg", link: "/categorias/ropa" },
+  { name: "Accesorios", image: "/images/sueter2.jpg", link: "/categorias/accesorios" },
+  { name: "Calzado", image: "/images/calzado.jpg", link: "/categorias/calzado" },
+];
+---
+<Header />
+<main class="categories">
+  <h1>Categorias</h1>
+  <div class="category-grid">
+    {categories.map((category) => (
+      <a href={category.link} class="category-card">
+        <img src={category.image} alt={category.name} />
+        <h2>{category.name}</h2>
+      </a>
+    ))}
+  </div>
+</main>
+
+<style>
+  .categories {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .category-card {
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .category-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .category-card h2 {
+    padding: 1rem;
+    background-color: #fff;
+    font-size: 1.25rem;
+  }
+
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+   /* Responsividad */
+   @media (max-width: 768px) {
+    .categories {
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .category-card h2 {
+      font-size: 1rem;
+      padding: 0.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.2rem;
+    }
+
+    .category-card {
+      font-size: 0.9rem;
+    }
+  }
+</style>
