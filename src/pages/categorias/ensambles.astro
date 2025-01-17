@@ -1,0 +1,45 @@
+---
+import ProductCard from "../../components/ProductCard.astro"
+import Header from "../../components/Header.astro";
+
+const products = [
+  {
+    image: '/images/sueter2.jpg',
+    title: 'Suéter de lana',
+    description: 'Suéter cálido y cómodo para el invierno.',
+    price: '29.99',
+    whatsappLink: `https://wa.me/7751272268?text=Me%20interesa%20el%20suéter%20de%20`,
+  },
+  {
+    image: '/path/to/image2.jpg',
+    title: 'Ensamble casual',
+    description: 'Perfecto para eventos semi-formales.',
+    price: '49.99',
+    whatsappLink: 'https://wa.me/1234567890?text=Me%20interesa%20el%20ensamble%20casual',
+  },
+];
+---
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<Header></Hader>
+
+<div class="product-grid">
+  {products.map(product => (
+    <ProductCard {...product} />
+  ))}
+</div>
+
+
+<style>
+  .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+</style>
+
+
