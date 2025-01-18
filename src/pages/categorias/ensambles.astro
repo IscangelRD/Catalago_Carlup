@@ -2,20 +2,25 @@
 import ProductCard from "../../components/ProductCard.astro"
 import Header from "../../components/Header.astro";
 
+const generateWhatsAppLink = (phone: string, title: string) => {
+  return `https://wa.me/${phone}?text=${encodeURIComponent(
+    `Me interesa el producto ${title}`
+  )}`;
+};
+
+
 const products = [
   {
-    image: '/images/sueter2.jpg',
+    image: '/images/sueter.jpg',
     title: 'Suéter de lana',
     description: 'Suéter cálido y cómodo para el invierno.',
-    price: '29.99',
-    whatsappLink: `https://wa.me/7751272268?text=Me%20interesa%20el%20suéter%20de%20`,
+    whatsappLink:generateWhatsAppLink("7751304983","Modelo 131"),
   },
   {
-    image: '/path/to/image2.jpg',
+    image: '/images/sueter3.jpg',
     title: 'Ensamble casual',
     description: 'Perfecto para eventos semi-formales.',
-    price: '49.99',
-    whatsappLink: 'https://wa.me/1234567890?text=Me%20interesa%20el%20ensamble%20casual',
+    whatsappLink: generateWhatsAppLink("7751182935","Modelo 136") 
   },
 ];
 ---

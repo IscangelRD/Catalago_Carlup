@@ -1,13 +1,12 @@
 ---
 // Puedes pasar las propiedades desde donde llames este componente
-const { image, title, description, price, whatsappLink } = Astro.props;
+const { image, title, description, whatsappLink } = Astro.props;
 ---
 <div class="product-card">
   <img src={image} alt={`Imagen de ${title}`} class="product-image" />
   <div class="product-info">
     <h3 class="product-title">{title}</h3>
     <p class="product-description">{description}</p>
-    <p class="product-price">${price}</p>
     <a href={whatsappLink} class="whatsapp-button" target="_blank" rel="noopener noreferrer">
       Contactar por WhatsApp
     </a>
